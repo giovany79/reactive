@@ -1,3 +1,11 @@
+# Estructura del proyecto
+
+* build.gradle: Archivo que automatiza el manejo de dependencias, compilación y pruebas unitarias
+
+* .gitignore: Archivo que ignora archivos de trabajo para ser publicados en github
+
+* src/test/java/co.com.gcode.reactorflux/FluxTest.java: Archivo con las pruebas unitarias para explicar los conceptos de flux
+
 # Flux 
 Publica 0 o N elementos. Se usa normalmente cuando retorna una lista
 
