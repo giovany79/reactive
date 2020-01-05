@@ -4,7 +4,7 @@
 
 * **.gitignore:** Archivo que ignora archivos de trabajo para ser publicados en github
 
-* **src/test/java/co.com.gcode.reactorflux/FluxTest.java:** Archivo con las pruebas unitarias para explicar los conceptos de flux
+* **src/test/java/co.com.gcode.reactormono/MonoTest.java:** Archivo con las pruebas unitarias para explicar los conceptos de mono
 
 # Mono
 Publica 0 o 1 elementos. Se usa normalmente cuando retorna un solo elemento o retorno void. 
