@@ -9,7 +9,7 @@ public class CollectTest {
 
 
     /**
-     * Recolecta una secuencia de numeros y los ordena descendentemente
+     * Recolecta una secuencia de números y los ordena descendentemente
      */
     @Test
     void collectSorted(){
@@ -17,4 +17,16 @@ public class CollectTest {
                 .collectSortedList(Comparator.reverseOrder())
                 .subscribe(System.out::println);
     }
+
+    /**
+     * Recolecta una secuencia de números y filtra los valores repetidos
+     */
+    @Test
+    void collectDistinc(){
+        Flux.just(1, 6, 2, 8, 3, 1, 5, 1)
+                .distinct()
+                .subscribe(System.out::println);
+    }
+
+
 }
