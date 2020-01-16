@@ -11,7 +11,8 @@ public class FilterTest {
     @Test
     void filterOddNumbers(){
         Flux.range(1,10)
-                .filter(value -> (value % 2)!=0)
+                .filter(value -> (value % 2)==0)
+                .map(value -> value + 1)
                 .log()
                 .subscribe();
     }

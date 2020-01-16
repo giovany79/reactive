@@ -15,8 +15,9 @@ public class FluxTest {
     @Test
     void firstFlux(){
         Flux.just("Andres", "Jose", "Ricardo")
-                .log()
-                .subscribe();
+                //.log()
+                .subscribe(e -> System.out.println(e));
+
     }
 
     /**
@@ -68,7 +69,7 @@ public class FluxTest {
         Flux.interval(Duration.ofSeconds(1))
                 .log()
                 .subscribe();
-        //Thread.sleep(5000);
+        //Thread.sleep(10000);
     }
 
     /**
@@ -80,9 +81,9 @@ public class FluxTest {
     void fluxFromIntervalTimeWithTake() throws Exception{
         Flux.interval(Duration.ofSeconds(1))
                 .log()
-                .take(5)
+                .take(2)
                 .subscribe();
-        Thread.sleep(5000);
+        //Thread.sleep(5000);
     }
 
     /**
@@ -92,10 +93,11 @@ public class FluxTest {
      * No se llama el metodo onComplete porque solo se solicitó 3 elementos
      */
     @Test
-    void fluxRequest(){
-        Flux.range(1,10)
+    void fluxRequest() throws Exception{
+        Flux.range(1,20)
                 .log()
                 .subscribe(null,null,null,s->s.request(3));
+        //Thread.sleep(10000);
     }
 
     /**
@@ -106,7 +108,7 @@ public class FluxTest {
     void fluxLimitRate(){
         Flux.range(1,10)
                 .log()
-                .limitRate(3)
+                .limitRate(2)
                 .subscribe();
     }
 

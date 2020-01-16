@@ -24,8 +24,8 @@ public class BatchTest {
      */
     @Test
     void windowStream(){
-        Flux<Flux<Integer>> windowedFlux = Flux.range(101, 20)
-                                               .windowUntil(e -> (e % 5) == 0);
+        Flux<Flux<Integer>> windowedFlux = Flux.range(102, 20)
+                                               .windowUntil(e -> (e % 2) == 0);
         windowedFlux.subscribe(window -> window .collectList()
                 .subscribe(e -> System.out.println("window: " +  e)));
     }

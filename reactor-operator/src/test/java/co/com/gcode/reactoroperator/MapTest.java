@@ -13,6 +13,7 @@ public class MapTest {
     void mapSecuencePlusTwo(){
         Flux.range(1,10)
                 .map(value -> value * 100)
+                .map(value -> value / 10)
                 .log()
                 .subscribe();
     }
