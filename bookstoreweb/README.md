@@ -1,5 +1,19 @@
 ## Proyecto bookstoreweb con anotaciones
 
+  Aplicación  para la administración de una librería que permitirá realizar las siguientes operaciones:
+  - Consultar todos los libros
+  - Consultar un libro exacto
+  - Adicionar libros a la libreria
+  - Actualizar información de un libro
+  - Eliminar un libro
+  
+  Los libros constan de la siguiente información:
+  - titulo
+  - Autor
+  - Año de publicación
+  - Número de páginas
+  - Precio
+  
   ## apply plugin: 'io.spring.dependency-management'
   Controla la versión de las dependencias directas y transitivas del proyecto y permite manejar exclusiones de 
   librerías.
