@@ -103,6 +103,7 @@ Interfase que extiende de ReactiveMongoRepository lo cual me permite tener las o
 
 ## GetAllBooks
 Obtiene todos los libros de la librería
+
 GET  http://localhost:8080/books
 
 ### Request Body
@@ -140,6 +141,7 @@ NA
 
 ## GetBook
 Obtiene un libro especifico según el código
+
 GET http://localhost:8080/books/5e2486954595ff7d34ace5bc
 
 ### RequestBody
@@ -159,6 +161,7 @@ NA
 
 ##  Save Book
 Almacena un nuevo libro
+
 POST http://localhost:8080/books/
 
 ### Request Body
@@ -175,6 +178,7 @@ POST http://localhost:8080/books/
 
 ## Update Book
 Actualiza la información de un libro
+
 PUT http://localhost:8080/books/5e2486954595ff7d34ace5bb
 
 ### Request Body
@@ -193,6 +197,7 @@ PUT http://localhost:8080/books/5e2486954595ff7d34ace5bb
 
 ## Delete Book
 Borra un libro de la librería
+
 DELETE http://localhost:8080/books/5e2486954595ff7d34ace5bb
 
 ### Request Body
@@ -204,6 +209,7 @@ NA
 
 ## Delete All Book
 Borra todos los libros de la librería
+
 DELETE http://localhost:8080/books
 
 ### Request Body
