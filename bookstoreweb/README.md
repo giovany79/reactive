@@ -1,8 +1,47 @@
 ## Proyecto bookstoreweb con anotaciones
 
-# Pluggins
+  ## apply plugin: 'io.spring.dependency-management'
+  Controla la versión de las dependencias directas y transitivas del proyecto y permite manejar exclusiones de 
+  librerías.
+  https://docs.spring.io/dependency-management-plugin/docs/current-SNAPSHOT/reference/html/
+  
+
+  ## apply plugin: 'java'
+  Adiciona capacidades para compilación y testing a un proyecto.
+  
+  https://docs.gradle.org/current/userguide/java_plugin.html
+  
+
+  ## apply plugin: 'idea'
+  Genera archivos que son usados por Intellij para hacer posible abrir el proyecto en intellij.
+  https://docs.gradle.org/current/userguide/idea_plugin.html
+  
+  ## apply plugin: 'org.springframework.boot'
+  Permite crear aplicaciones basadas en spring stand-alone que tu ejecutas fácilmente con poca configuración.
+  https://plugins.gradle.org/plugin/org.springframework.boot
 
 # Librerías
+
+## org.projectlombok
+Librería que simplifica la codificación evitando escribir getters, setters, constructores y variables de logs. En tiempo de compilación genera dichos métodos.
+
+## org.junit.jupiter
+Es la combinacion de el nuevo modelo de programación y la extension del modelo para escribir test en Junit 5. Properciona TestEngine para correr test basados en Junit en la plataforma
+
+## org.springframework.boot:spring-boot-starter-webflux
+Adiciona todas las librerias de spring requeridas
+* spring-boot y spring-boot-starter para configuración básico de springboot
+* spring-webflux:  framework de webflux
+* reactor-core: Librerías necesarias para trabajar con el framework de reactor
+
+## org.springframework:spring-context
+Interfase que proporciona configuración a la aplicación
+
+## org.springframework.boot:spring-boot-starter-data-mongodb-reactive
+Es una librería spring-boot-starter para usar base de datos mongodb reactivo. Setea las propiedades de logeo
+
+## de.flapdoodle.embed:de.flapdoodle.embed.mongo'
+Base de datos mongodb enbebida usada para pruebas unitarias. Para este ejercicio se va  usar como la base de datos principal
 
 # Componentes
 
