@@ -103,7 +103,7 @@ Interfase que extiende de ReactiveMongoRepository lo cual me permite tener las o
 
 ## GetAllBooks
 Obtiene todos los libros de la librería
-   http://localhost:8080/books
+GET  http://localhost:8080/books
 
 ### Request Body
 NA
@@ -140,12 +140,12 @@ NA
 
 ## GetBook
 Obtiene un libro especifico según el código
-http://localhost:8080/books/5e2486954595ff7d34ace5bc
+GET http://localhost:8080/books/5e2486954595ff7d34ace5bc
 
-## RequestBody
+### RequestBody
 NA
 
-## Response Body
+### Response Body
 ```json
 {
     "id": "5e2486954595ff7d34ace5bc",
@@ -157,3 +157,36 @@ NA
 }
 ```
 
+##  Save Book
+Almacena un nuevo libro
+POST http://localhost:8080/books/
+
+### Request Body
+ 
+```json
+{
+    "title": "Focus",
+    "author": "Daniel Goleman",
+    "yearPublisher": 2013,
+    "pages": 331,
+    "price": 45000.0
+}
+```
+
+## Update Book
+Actualiza la información de un libro
+PUT http://localhost:8080/books/5e2486954595ff7d34ace5bb
+
+### Request Body
+
+```json
+{
+    "id": "5e2486954595ff7d34ace5bb",
+    "title": "Elon Musk",
+    "author": "Ashlee Vance",
+    "yearPublisher": 2015,
+    "pages": 400,
+    "price": 60000.0
+}
+
+```
