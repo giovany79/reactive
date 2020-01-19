@@ -102,12 +102,13 @@ Interfase que extiende de ReactiveMongoRepository lo cual me permite tener las o
 # Operaciones
 
 ## GetAllBooks
+Obtiene todos los libros de la librería
    http://localhost:8080/books
 
-### Body Request
+### Request Body
 NA
 
-### body Response
+### Response body
 ```json
 [
     {
@@ -136,4 +137,23 @@ NA
     }
 ]
 ````
+
+## GetBook
+Obtiene un libro especifico según el código
+http://localhost:8080/books/5e2486954595ff7d34ace5bc
+
+## RequestBody
+NA
+
+## Response Body
+
+{
+    "id": "5e2486954595ff7d34ace5bc",
+    "title": "Por otro camino",
+    "author": "Carlos Raul Yepes",
+    "yearPublisher": 2016,
+    "pages": 244,
+    "price": 49000.0
+}
+
 
