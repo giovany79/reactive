@@ -9,6 +9,8 @@ Proyecto donde se explica la creación de publisher Flux mediante una clase test
 ## reactor-operator
 Proyecto donde se explica los operadores soportados por Mono y Flux mediante clases test
 
+## bookstoreweb
+Proyecto que implementa webflux para una librería web usando controlador por anotaciones
 
 # Pluiggins necesarios
 
