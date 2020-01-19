@@ -99,3 +99,41 @@ Clase con la definición de entidad de libro. Usa la libreria lombok para simpli
 ### BookRepository.java
 Interfase que extiende de ReactiveMongoRepository lo cual me permite tener las operaciones crud para la entidad book
 
+# Operaciones
+
+## GetAllBooks
+   http://localhost:8080/books
+
+### Body Request
+NA
+
+### body Response
+```json
+[
+    {
+        "id": "5e2486954595ff7d34ace5bc",
+        "title": "Por otro camino",
+        "author": "Carlos Raul Yepes",
+        "yearPublisher": 2016,
+        "pages": 244,
+        "price": 49000.0
+    },
+    {
+        "id": "5e2486954595ff7d34ace5bb",
+        "title": "Elon Musk",
+        "author": "Ashlee Vance",
+        "yearPublisher": 2015,
+        "pages": 400,
+        "price": 60000.0
+    },
+    {
+        "id": "5e2486954595ff7d34ace5ba",
+        "title": "Einstein",
+        "author": "Walter Isaacson",
+        "yearPublisher": 2007,
+        "pages": 675,
+        "price": 90000.0
+    }
+]
+````
+
