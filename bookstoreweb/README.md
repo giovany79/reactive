@@ -192,7 +192,7 @@ POST http://localhost:8080/books/
 ## Update Book
 Actualiza la información de un libro
 
-PUT http://localhost:8080/books/5e2486954595ff7d34ace5bb
+PUT http://localhost:8080/books/5e2494f5b8e75b04948b876a
 
 ### Request Body
 
@@ -202,10 +202,23 @@ PUT http://localhost:8080/books/5e2486954595ff7d34ace5bb
     "title": "Elon Musk",
     "author": "Ashlee Vance",
     "yearPublisher": 2015,
-    "pages": 400,
+    "pages": 401,
     "price": 60000.0
 }
 
+```
+
+### Response Body
+
+```json
+{
+    "id": "5e2494f5b8e75b04948b876a",
+    "title": "Elon Musk",
+    "author": "Ashlee Vance",
+    "yearPublisher": 2015,
+    "pages": 401,
+    "price": 60000.0
+}
 ```
 
 ## Delete Book
