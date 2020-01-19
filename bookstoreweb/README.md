@@ -174,8 +174,21 @@ POST http://localhost:8080/books/
     "pages": 331,
     "price": 45000.0
 }
-```
 
+```
+### Response Body
+
+```json
+{
+    "id": "5e24951ab8e75b04948b876c",
+    "title": "Focus",
+    "author": "Daniel Goleman",
+    "yearPublisher": 2013,
+    "pages": 331,
+    "price": 45000.0
+}
+
+```
 ## Update Book
 Actualiza la información de un libro
 
