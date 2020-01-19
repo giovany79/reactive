@@ -12,7 +12,7 @@ import reactor.core.publisher.Mono;
 @RestController
 @RequestMapping("/books")
 @AllArgsConstructor
-public class BookController {
+public class    BookController {
 
     private BookRepository repository;
 
