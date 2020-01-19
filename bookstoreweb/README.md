@@ -25,8 +25,12 @@
 ## org.projectlombok
 Librería que simplifica la codificación evitando escribir getters, setters, constructores y variables de logs. En tiempo de compilación genera dichos métodos.
 
+https://projectlombok.org/
+
 ## org.junit.jupiter
 Es la combinacion de el nuevo modelo de programación y la extension del modelo para escribir test en Junit 5. Properciona TestEngine para correr test basados en Junit en la plataforma
+
+https://junit.org/junit5/
 
 ## org.springframework.boot:spring-boot-starter-webflux
 Adiciona todas las librerias de spring requeridas
@@ -34,14 +38,24 @@ Adiciona todas las librerias de spring requeridas
 * spring-webflux:  framework de webflux
 * reactor-core: Librerías necesarias para trabajar con el framework de reactor
 
+https://spring.io/projects/spring-boot
+https://github.com/spring-projects/spring-framework
+
 ## org.springframework:spring-context
 Interfase que proporciona configuración a la aplicación
+
+https://spring.io/projects/spring-boot
+https://github.com/spring-projects/spring-framework
 
 ## org.springframework.boot:spring-boot-starter-data-mongodb-reactive
 Es una librería spring-boot-starter para usar base de datos mongodb reactivo. Setea las propiedades de logeo
 
+https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb-reactive/2.0.0.M1
+
 ## de.flapdoodle.embed:de.flapdoodle.embed.mongo'
 Base de datos mongodb enbebida usada para pruebas unitarias. Para este ejercicio se va  usar como la base de datos principal
+
+https://github.com/flapdoodle-oss/de.flapdoodle.embed.mongo
 
 # Componentes
 
