@@ -190,3 +190,24 @@ PUT http://localhost:8080/books/5e2486954595ff7d34ace5bb
 }
 
 ```
+
+## Delete Book
+Borra un libro de la librería
+DELETE http://localhost:8080/books/5e2486954595ff7d34ace5bb
+
+### Request Body
+NA
+
+### Response Body
+NA
+
+
+## Delete All Book
+Borra todos los libros de la librería
+DELETE http://localhost:8080/books
+
+### Request Body
+NA
+
+### Response Body
+NA
