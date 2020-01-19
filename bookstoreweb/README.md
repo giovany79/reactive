@@ -7,3 +7,9 @@
 - Springboot 2 (la última versión vigente) - Springb webflux solo funciona con Spring 2
 - Escoger grupo: co.com.gcode.bookstoreweb
 - Agregar los siguientes pluggins
+
+# Componentes
+
+## build.gradle
+
+
