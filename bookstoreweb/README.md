@@ -146,7 +146,7 @@ http://localhost:8080/books/5e2486954595ff7d34ace5bc
 NA
 
 ## Response Body
-
+```json
 {
     "id": "5e2486954595ff7d34ace5bc",
     "title": "Por otro camino",
@@ -155,5 +155,5 @@ NA
     "pages": 244,
     "price": 49000.0
 }
-
+```
 
