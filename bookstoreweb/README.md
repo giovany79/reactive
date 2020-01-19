@@ -198,7 +198,6 @@ PUT http://localhost:8080/books/5e2494f5b8e75b04948b876a
 
 ```json
 {
-    "id": "5e2486954595ff7d34ace5bb",
     "title": "Elon Musk",
     "author": "Ashlee Vance",
     "yearPublisher": 2015,
