@@ -59,7 +59,7 @@ https://github.com/flapdoodle-oss/de.flapdoodle.embed.mongo
 
 # Componentes
 
-## build.gradle
+### build.gradle
 Archivo principal de gradle para la compilación, pruebas unitarias y generación del artefacto.
 
 ### ApplicationBookStoreWeb.java
