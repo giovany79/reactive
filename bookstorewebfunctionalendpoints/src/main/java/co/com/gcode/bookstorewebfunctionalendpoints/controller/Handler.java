@@ -1,10 +1,11 @@
-package co.com.gcode.bookstorewebfunctionalendpoints;
+package co.com.gcode.bookstorewebfunctionalendpoints.controller;
 
 import co.com.gcode.bookstorewebfunctionalendpoints.model.Book;
 import co.com.gcode.bookstorewebfunctionalendpoints.repository.BookRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
@@ -14,14 +15,16 @@ import reactor.core.publisher.Mono;
 @AllArgsConstructor
 @Component
 public class Handler {
+
     BookRepository repository;
 
 
     /**
      * Retorna todos los libros de la libreria
-     * @return ServerResponse response
+     * @param ServerRequst que contiene la peticion http
+     * @return ServerResponse que contiene la respuesta http
      */
-    public Mono<ServerResponse> getAllBooks(){
+    public Mono<ServerResponse> getAllBooks(ServerRequest request){
         Flux<Book> books = repository.findAll();
         return ServerResponse.ok()
                 .contentType(MediaType.APPLICATION_JSON)
@@ -29,8 +32,9 @@ public class Handler {
     }
 
     /**
-     * Retorna el libro asociado al id
-     * @return ServerResponse response
+     * Retorna un libro especifico enviado en el path con el id
+     * @param ServerRequst que contiene la peticion http
+     * @return ServerResponse que contiene la respuesta http
      */
     public Mono<ServerResponse> getBook(ServerRequest request){
         String id = request.pathVariable("id");
@@ -42,8 +46,8 @@ public class Handler {
 
     /**
      * Almacena un libro enviado en el body
-     * @param ServerRequest request
-     * @return ServerResponse response
+     * @param ServerRequst que contiene la peticion http
+     * @return ServerResponse que contiene la respuesta http
      */
     public Mono<ServerResponse> saveBook(ServerRequest request){
         Mono<Book> bookMono = request.bodyToMono(Book.class);
@@ -56,9 +60,8 @@ public class Handler {
 
     /**
      * Actualiza un libro existente en base a su id y a la entidad enviada en el body
-     * @param id
-     * @param ServerRequest request
-     * @return ServerResponse response
+     * @param ServerRequst que contiene la peticion http
+     * @return ServerResponse que contiene la respuesta http
      */
     public Mono<ServerResponse> updateBook(ServerRequest request){
         String id = request.pathVariable("id");
@@ -76,6 +79,34 @@ public class Handler {
                         .build()).flatMap(product -> ServerResponse.ok()
         .contentType(MediaType.APPLICATION_JSON)
         .body(repository.save(product), Book.class)).switchIfEmpty(notFound);
+    }
+
+    /**
+     * Controlador que elimina un libro en base a su id
+     * @param ServerRequst que contiene la peticion http
+     * @return ServerResponse que contiene la respuesta http
+     */
+    public Mono<ServerResponse> deleteBook(ServerRequest request){
+        String id = request.pathVariable("id");
+        repository.findById(id)
+                .flatMap(existingBook -> repository.delete(existingBook)
+                        .then(Mono.just(ResponseEntity.ok().<Void>build())))
+                .defaultIfEmpty(ResponseEntity.notFound().build());
+        return ServerResponse.ok()
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(Mono.just("Eliminacion exitosa"), String.class);
+    }
+
+    /**
+     * Controlador que elimina todos los libros
+     * @param ServerRequst que contiene la peticion http
+     * @return ServerResponse que contiene la respuesta http
+     */
+    public Mono<ServerResponse> deleteAllBooks(ServerRequest request){
+        repository.deleteAll();
+        return ServerResponse.ok()
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(Mono.just("Eliminacion exitosa"), String.class);
     }
 
 
