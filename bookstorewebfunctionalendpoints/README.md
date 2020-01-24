@@ -84,6 +84,15 @@ Clase con que lanza la aplicación springboot. Adicionalmente contiene el métod
 * Elon Musk
 * Por otro camino
 
+## Handler.java
+Clase que contiene los métodos que resuelven una petición particular
+
+## Route.java
+Clase que se encarga de enrutar la peticion http al método handler que la resuelve
+
+## Book.java
+Entidad que representa los libros de una librería
+
 # Operaciones
 
 ## GetAllBooks
