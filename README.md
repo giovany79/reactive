@@ -13,5 +13,5 @@ Proyecto donde se explica los operadores soportados por Mono y Flux mediante cla
 Proyecto que implementa webflux para una librería web usando controlador por anotaciones
 
 
-
-  
+## bookstorewebfunctionalendpoints
+Proyecto que implementa webflux para una librería web usando controlador por endpoints funcionales
